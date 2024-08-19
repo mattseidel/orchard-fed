@@ -67,6 +67,11 @@ module.exports = {
           to: { height: "0" },
         },
       },
+      fontFamily: {
+        'sans': ['Open Sans', 'sans-serif'],
+        'open-sans-condensed': ['Open Sans Condensed', 'sans-serif'],
+        'open-sans-semi-condensed': ['Open Sans Semi Condensed', 'sans-serif'],
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

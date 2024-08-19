@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useEffect, useState } from "react";
 
 interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -7,19 +8,23 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
    * image is fully loaded.
    */
   fallbackSrc?: string;
+  /**
+   * Indicates if the image should have a hover effect.
+   * @default false
+   */
+  hasHover?: boolean;
 }
 
 /**
- * `ProgressiveImage` is a React functional component that renders an image with an optional fallback source.
- * It initially displays the fallback image (if provided) and then switches to the high-resolution image
- * once it has fully loaded.
- *
- * @param fallbackSrc - The URL of the fallback image (optional).
- * @param rest - Other props inherited from the standard HTMLImageElement.
- *
- * @returns A picture element containing the image with the appropriate source.
+ * @function ProgressiveImage
+ * @name ProgressiveImage
+ * @description React functional component that renders an image with an optional fallback source. It initially displays the fallback image (if provided) and then switches to the high-resolution image once it has fully loaded. An optional hover effect can also be applied.
+ * @param {string} [fallbackSrc] - The URL of the fallback image (optional).
+ * @param {boolean} [hasHover] - Indicates if the image should have a hover effect (optional).
+ * @param {React.ImgHTMLAttributes<HTMLImageElement>} rest - Other props inherited from the standard HTMLImageElement.
+ * @returns {JSX.Element} A picture element containing the image with the appropriate source.
  */
-const ProgressiveImage = ({ fallbackSrc, ...rest }: ImageProps) => {
+const ProgressiveImage = ({ fallbackSrc, hasHover, className, ...rest }: ImageProps) => {
   /**
    * `highResSrc` holds the source of the currently displayed image.
    * It initially takes the value of `fallbackSrc` if provided, otherwise it defaults to `rest.src`.
@@ -46,11 +51,16 @@ const ProgressiveImage = ({ fallbackSrc, ...rest }: ImageProps) => {
     }
   }, [fallbackSrc, rest.src]);
 
+  const cn = classNames(className, {
+    "transition duration-300 hover:scale-105": hasHover,
+  })
+
   return (
     <picture>
       <source srcSet={highResSrc} key={highResSrc} />
-      <source srcSet={fallbackSrc} media="(max-width: 600px)" />
+      <source srcSet={fallbackSrc} media="(max-width: 600px)" className="scale-" />
       <img
+        className={cn}
         {...rest}
         src={highResSrc}
         alt={rest.alt ?? "Image description"}

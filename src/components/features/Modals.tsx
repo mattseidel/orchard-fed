@@ -18,12 +18,12 @@ export const Modals = ({
 }: Feature) => {
   return (
     <Dialog>
-      <DialogTrigger className="border-b border-red-500 py-2 hover:border-none hover:bg-red-500 transition duration-300 rounded-md px-1">
+      <DialogTrigger className="border-b border-red-500 py-2 font-open-sans-semi-condensed hover:border-none hover:bg-red-500 transition duration-300 rounded-md px-1">
         Read more
       </DialogTrigger>
       <DialogContent className="bg-gray-950 text-white px-8 py-10 mb-12">
         <DialogHeader>
-          <DialogTitle className="text-bold font-open-sans-semi-condensed text-3xl mb-4">
+          <DialogTitle className="text-bold font-open-sans-condensed text-3xl mb-4">
             {title}
           </DialogTitle>
           <ProgressiveImage
@@ -37,7 +37,7 @@ export const Modals = ({
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Link className="text-white bg-red-500 hover:bg-red-600 transition duration-300 rounded-md px-4 py-2 text-center cursor-pointer">
+          <Link className="text-white bg-red-500 font-open-sans-semi-condensed hover:bg-red-600 transition duration-300 rounded-md px-4 py-2 text-center cursor-pointer">
             Discover more
           </Link>
         </DialogFooter>

@@ -21,7 +21,7 @@ export const CardElement = ({
         />
       </CardHeader>
       <CardContent>
-        <h1 className="capitalize mb-4">{title}</h1>
+        <h1 className="capitalize mb-4 font-open-sans-condensed">{title}</h1>
         <p className="text-gray-500">{description}</p>
       </CardContent>
       <CardFooter className="mt-4">

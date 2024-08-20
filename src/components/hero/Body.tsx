@@ -21,7 +21,7 @@ export const Body = () => {
       <br />
 
       <aside className="space-y-1">
-        <h2 className="text-lg text-red-700 lg:text-lg">BE MINDFUL</h2>
+        <h2 className="text-lg text-red-700 lg:text-lg font-open-sans-semi-condensed">BE MINDFUL</h2>
         <p className="text-gray-200 lg:text-lg">
           Sourcing local or organic food is a good way to start being more
           mindful about what you're cooking and eating

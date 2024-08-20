@@ -1,28 +1,32 @@
 export const Body = () => {
   return (
-    <section className="flex flex-col">
-      <div className="lg:mb-10" >
-        <h1 className="text-xl text-gray-100 lg:text-2xl mb-4 font-light ">ANSWER YOURS BODY'S NEED</h1>
-        <hr className="text-gray-100" />
+    <section className="flex flex-col mb-12">
+      <article className="lg:mb-10">
+        <header>
+          <h1 className="text-lg text-gray-100 lg:text-2xl mb-4 font-open-sans-condensed font-light text-center lg:text-left">
+            ANSWER YOUR BODY'S NEEDS
+          </h1>
+          <hr className="text-gray-100" />
+        </header>
         <br />
-        <p className="text-gray-400 lg:text-lg">
-          The way ingredients are sourced affects the way we nourish our bodies.
-          Author Mark Schatzer believes our body naturally develops an appetite
-          for the foods and nutrients it needs to be healthy, but that
-          artificial flavourings are getting in the way this can be reversed by
-          focusing on high-quality ingredients and being mindful as your
-          appetite guides you to consume according to your body's needs.
+        <p className="text-gray-400 text-sm lg:text-lg text-justify lg:text-left">
+          The way ingredients are sourced affects how we nourish our bodies.
+          Author Mark Schatzker believes that our bodies naturally develop an
+          appetite for the foods and nutrients needed to stay healthy. However,
+          artificial flavors can interfere with this process. By focusing on
+          high-quality ingredients and being mindful, you can let your appetite
+          guide you to consume according to your body's needs.
         </p>
-      </div>
+      </article>
       <br />
 
-      <div className="space-y-2">
+      <aside className="space-y-1">
         <h2 className="text-lg text-red-700 lg:text-lg">BE MINDFUL</h2>
         <p className="text-gray-200 lg:text-lg">
           Sourcing local or organic food is a good way to start being more
           mindful about what you're cooking and eating
         </p>
-      </div>
+      </aside>
     </section>
   );
 };

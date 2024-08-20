@@ -1,6 +1,8 @@
 import ProgressiveImage from "../common/Image";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Feature } from "./featuresList";
+import { Modals } from "./Modals";
+
 
 export const CardElement = ({
   title,
@@ -19,13 +21,11 @@ export const CardElement = ({
         />
       </CardHeader>
       <CardContent>
-        <h1 className="capitalize">{title}</h1>
+        <h1 className="capitalize mb-4">{title}</h1>
         <p className="text-gray-500">{description}</p>
       </CardContent>
-      <CardFooter>
-        <button className="border-b border-red-500 py-2 hover:border-none hover:bg-red-500 transition duration-300 rounded-md px-1">
-          READ MORE
-        </button>
+      <CardFooter className="mt-4">
+        <Modals title={title} description={description} highResImage={highResImage} lowResImage={lowResImage} />
       </CardFooter>
     </Card>
   );

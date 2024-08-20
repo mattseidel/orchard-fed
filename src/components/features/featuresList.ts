@@ -14,22 +14,23 @@ export interface Feature {
 
 export const features: Feature[] = [
   {
-    title: "Summer lunch menu by mark best",
+    title: "Summer Lunch Menu by Mark Best",
     description:
-      "AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warner weather and entertaning at home.",
+      "AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.",
     lowResImage: LowResImage1,
     highResImage: HighResImage1,
   },
   {
-    title: 'A triditional chrismas eve, mark best style',
-    description:'One of Autralia\'s best chef and AEG ambassador, Mark Best, shares his favourit Chrismas Eve menu which is sure to impress your guests.',
+    title: 'A Traditional Christmas Eve, Mark Best Style',
+    description: "One of Australia's best chefs and AEG ambassador, Mark Best, shares his favorite Christmas Eve menu, which is sure to impress your guests.",
     lowResImage: LowResImage2,
-    highResImage: HighResImage2
+    highResImage: HighResImage2,
   },
   {
     title: 'Taking Taste Further',
-    description: 'This exclusive cookbook gives you all the know-how you need. We\'ve designed it to make sure you get the most out of our products - and best out of your food.',
+    description: "This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most out of our products—and the best out of your food.",
     lowResImage: LowResImage3,
-    highResImage: HighResImage3
+    highResImage: HighResImage3,
   }
 ];
+

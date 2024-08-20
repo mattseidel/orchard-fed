@@ -52,12 +52,12 @@ const ProgressiveImage = ({ fallbackSrc, hasHover, className, ...rest }: ImagePr
   }, [fallbackSrc, rest.src]);
 
   const cn = classNames(className, {
-    "transition duration-300 hover:scale-105": hasHover,
+    "transition duration-300 lg:hover:scale-105 hover:shadow-xl hover:shadow-gray-800 ": hasHover,
   })
 
   return (
     <picture>
-      <source srcSet={highResSrc} key={highResSrc} />
+      <source srcSet={highResSrc} key={highResSrc}  className=""/>
       <source srcSet={fallbackSrc} media="(max-width: 600px)" className="scale-" />
       <img
         className={cn}

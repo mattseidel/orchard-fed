@@ -51,7 +51,8 @@ However, the following prerequisites are required to run the project:
 1. Clone the repository:
    ```bash
    git clone https://github.com/mattseidel/orchard-fed.git
-   cd [repository-name]
+   cd orchard-fed
+   ```
 2. Install the dependencies:
 ```bash
 npm install
